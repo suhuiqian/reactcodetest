@@ -1,0 +1,144 @@
+.successPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.successHeader {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.successHeader h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.successContent {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.successIcon {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.successText {
+  color: #000;
+
+  text-align: center;
+  /* H3_font size */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0 30px 0;
+}
+
+.successText h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.successText p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.successTextHead,.successTextItem {
+  color: #000;
+
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.successTextHead{
+  text-align: center;
+}
+
+.successDetails {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.successDetails h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.successDetails ul {
+  margin: 15px 0 0 0;
+  padding-left: 20px;
+  color: #555;
+}
+
+.successDetails li {
+  margin-bottom: 8px;
+}
+
+.successActions {
+  margin-top: 30px;
+}
+
+.fullWidthButton {
+  width: 100% !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .successContent {
+    padding: 15px;
+  }
+
+  .successText h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .successText p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .successText h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .successText p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

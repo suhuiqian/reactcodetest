@@ -1,0 +1,88 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.landing-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-section {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.heroImage {
+  /* width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease; */
+}
+
+.hheroImage:hover {
+  transform: scale(1.05);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  background: #fdd100;
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(253, 209, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    width: 250px;
+    height: 150px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Make the image fit the viewport width */
+.heroImage {
+  width: auto;           /* 图片宽度为原始宽度 */
+  height: auto;          /* 图片高度为原始高度 */
+  max-width: 100%;       /* 避免超出容器 */
+  max-height: 100vh;     /* 不超过视口高度 */
+}

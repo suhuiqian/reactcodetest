@@ -1,0 +1,162 @@
+.applicationsIndex {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.currentApplicationSection,
+.applicationsInProgressSection {
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sectionHeader {
+  background: #ffd700;
+  padding: 15px 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.actionButtons {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fullWidthButton {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fullWidthButton:hover {
+  background-color: #e6c200;
+}
+
+.lastSavedInfo {
+  padding: 0 20px 20px;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+
+.applicationsList {
+  padding: 20px;
+}
+
+.applicationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.applicationItem:hover {
+  background: #eeeeee;
+}
+
+.applicationItem:last-child {
+  margin-bottom: 0;
+}
+
+.applicationInfo {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--_color, #EDEDED);
+
+}
+
+.infoTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.identificationNumber,
+.applicationDate {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.0;
+  display: flex;
+}
+
+.identificationNumber {
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.identificationNumberLeft,
+.applicationDateLeft {
+  min-width: 80px;
+  margin-bottom: 4px;
+}
+
+.applicationDate {
+  color: #000;
+}
+
+.applicationDate:last-child{
+  margin-bottom: 3px;
+}
+
+.confirmButton {
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  background: #ffd700;
+  color: #FFF;
+  transition: background-color 0.2s ease;
+  max-width: 60px;
+  height: 30px;
+}
+
+.confirmButton:hover {
+  background: #e6c200;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .applicationsIndex {
+    padding: 15px;
+  }
+
+  .applicationItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .confirmButton {
+    align-self: flex-end;
+  }
+}

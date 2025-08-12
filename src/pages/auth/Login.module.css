@@ -1,0 +1,113 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
+}
+.loginContainer {
+  background: white;
+  border-radius: 12px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
+  border: 2px solid #ccc; /* Light gray */
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+.loginHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.loginHeader h2 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.loginHeader p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+.loginForm {
+  margin-bottom: 30px;
+}
+.errorMessage {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #fcc;
+}
+.inputGroup {
+  margin-bottom: 20px;
+}
+.inputGroup label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+.inputGroup input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+.inputGroup input:focus {
+  outline: none;
+  border-color: #fdd100;
+}
+.inputGroup input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+.formActions {
+  margin-top: 30px;
+}
+.loginButton {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.loginFooter {
+  text-align: center;
+  border-top: 1px solid #e1e5e9;
+  padding-top: 20px;
+}
+.passwordResetLink {
+  margin-bottom: 15px;
+}
+.registerLink {
+  font-size: 14px;
+  color: #666;
+}
+.registerLink span {
+  margin-right: 5px;
+}
+.linkText {
+  color: #fdd100;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.linkText:hover {
+  color: #fdd100;
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  .loginHeader h2 {
+    font-size: 20px;
+  }
+}

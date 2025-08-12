@@ -1,0 +1,30 @@
+.submitIdentityPage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 60vh;
+}
+
+.submitIdentityContent {
+    padding: 10px;
+}
+
+.h4Style {
+    color: #000;
+
+    /* H4_font size */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.actionButtons {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 30px 100px 0 100px;
+}

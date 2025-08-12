@@ -1,0 +1,66 @@
+.contractDetailsPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+}
+
+.contractIntro {
+  margin: 24px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+  text-align: center;
+}
+
+.contractIntro p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.backButton {
+  min-width: 120px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contractDetailsPage {
+    padding: 16px;
+  }
+
+  .contractIntro {
+    padding: 16px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+
+  .contractIntro p {
+    font-size: 14px;
+  }
+
+  .actionButtons {
+    margin-top: 32px;
+    padding-top: 16px;
+  }
+
+  .backButton {
+    min-width: 100px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,7 @@
+
+.twoStepVerifyPage {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Allows content to shrink */
+}

@@ -1,0 +1,64 @@
+.profilePage {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.profileContainer {
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background: #ffd600;
+  padding: 24px;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.content {
+  padding: 32px 24px;
+}
+
+.buttonContainer {
+  margin: 24px 0 0 0;
+  text-align: center;
+}
+
+.backButtonContainer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profilePage {
+    padding: 10px;
+  }
+
+  .profileContainer {
+    border-radius: 8px;
+  }
+
+  .header {
+    padding: 20px 16px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .content {
+    padding: 24px 16px;
+  }
+}

@@ -1,0 +1,766 @@
+.newClaimPage {
+  min-height: 100vh;
+  background: white;
+  padding: 0;
+  display: flex;
+}
+
+.newClaimContainer {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background: #ffd600;
+  padding: 24px;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Step Indicator */
+.stepIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px 0 20px;
+  background: #fff;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e1e5e9;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.stepCircle.active {
+  background: #ffd600;
+  color: #333;
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Content */
+.content {
+  padding: 10px 20px 0 20px;
+  min-height: 400px;
+}
+
+.stepContent h3 {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ffd600;
+}
+
+/* Form Styles */
+.formGroup {
+  margin-bottom: 10px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 4px 0 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.colorGrey {
+  color: #C5C5C5;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* File Upload */
+.uploadSection {
+  margin-bottom: 24px;
+}
+
+.uploadArea {
+  position: relative;
+  border: 2px dashed #e1e5e9;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.uploadArea:hover {
+  border-color: #ffd600;
+  background: #fffbf0;
+}
+
+.fileInput {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.uploadLabel {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.uploadIcon {
+  font-size: 48px;
+  color: #666;
+}
+
+.uploadText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.uploadText strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.uploadText span {
+  font-size: 14px;
+  color: #666;
+}
+
+.uploadHint {
+  font-size: 12px !important;
+  color: #999 !important;
+  margin-top: 4px;
+}
+
+/* Documents List */
+.documentsList {
+  margin-top: 24px;
+}
+
+.documentsList h4 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.documentItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+  margin-bottom: 8px;
+}
+
+.documentIcon {
+  font-size: 20px;
+}
+
+.documentName {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.documentSize {
+  font-size: 12px;
+  color: #666;
+}
+
+.removeButton {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+.removeButton:hover {
+  background: #ff5252;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+}
+
+/* Preview Section */
+.previewSection {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.previewItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.previewItem:last-child {
+  border-bottom: none;
+}
+
+.previewLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+.previewValue {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  flex: 1;
+  margin-left: 16px;
+}
+
+/* Success Screen */
+.successContent {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successContent h3 {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+}
+
+.successMessage {
+  margin-top: 24px;
+}
+
+.successMessage p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.successMessage p:last-child {
+  margin-bottom: 0;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 16px;
+  padding: 160px 24px 50px 24px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevButton,
+.nextButton,
+.submitButton,
+.completeButton {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 120px;
+  width: 200px;
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+
+.prevButton{
+  background-color: #fdd100;
+  color: white;
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Bank Account Information Styles */
+.noticeBox {
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.noticeBox p {
+  margin: 0;
+  color: #000;
+
+  /* H5_font size */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.accountForm {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.bankNote {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #FDD100;
+  line-height: 1.4;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  padding: 4px 0 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.radioLabel:hover {
+  background: #f0f0f0;
+}
+
+.radioLabel input[type="radio"] {
+  margin: 0 7px 3px 0px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #888; /* 默认边框 */
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+}
+
+
+
+.nameInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.nameField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nameField input{
+  padding: 8px 0 8px 10px;
+  
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.nameField label {
+  
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.inputNote {
+  font-size: 12px;
+  color: #000;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Confirmation Section Styles */
+.confirmationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.confirmationBlock {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e1e5e9;
+}
+
+.confirmationBlock h4 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffd600;
+}
+
+.documentList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.documentItem {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.noDocuments {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  border: 1px dashed #e1e5e9;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoValue {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.required {
+  color: #f00;
+  margin-left: 20px;
+}
+
+/* Document Section Styles */
+.documentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.documentGroup {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e1e5e9;
+}
+
+.documentGroup h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffd600;
+}
+
+.documentDescription {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.documentNote {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  color: #856404;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.uploadedFile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+  margin-bottom: 12px;
+}
+
+.fileIcon {
+  font-size: 20px;
+  color: #666;
+}
+
+.fileName {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.fileSize {
+  font-size: 12px;
+  color: #666;
+}
+
+.attentionBox {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.attentionBox h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #856404;
+}
+
+.attentionBox ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.attentionBox li {
+  font-size: 13px;
+  color: #856404;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.attentionBox li:last-child {
+  margin-bottom: 0;
+}
+
+
+.devControls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 12px;
+}
+
+.devNavigation {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.devNavigation button {
+  padding: 5px 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.devNavigation button:hover {
+  background: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .newClaimPage {
+    padding: 0;
+  }
+
+  .newClaimContainer {
+    border-radius: 8px;
+  }
+
+  .header {
+    padding: 20px 16px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .stepIndicator {
+    padding: 30px 20px 0 20px;
+  }
+
+  .stepCircle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .stepLabel {
+    font-size: 10px;
+  }
+
+  .content {
+    padding: 10px 20px 0 20px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .uploadArea {
+    padding: 30px 16px;
+  }
+
+  .uploadIcon {
+    font-size: 36px;
+  }
+
+  .uploadText strong {
+    font-size: 14px;
+  }
+
+  .uploadText span {
+    font-size: 12px;
+  }
+
+  .previewItem {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .previewValue {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+  }
+
+  .prevButton,
+  .nextButton,
+  .submitButton,
+  .completeButton {
+    /* width: 100%; */
+  }
+}

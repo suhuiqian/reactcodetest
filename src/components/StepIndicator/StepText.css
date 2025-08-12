@@ -1,0 +1,61 @@
+.step-text {
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 4em;
+}
+
+.step-text.future {
+  color: #999;
+}
+
+.step-text.active {
+  color: #FDD100;
+}
+
+.step-text.completed {
+  color: #FDD100;
+}
+
+.step-title {
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.step-description {
+  font-size: 10px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.step-text.future .step-description {
+  color: #999;
+}
+
+.step-text.active .step-description {
+  color: #FDD100;
+}
+
+.step-text.completed .step-description {
+  color: #FDD100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-text {
+    font-size: 11px;
+  }
+}

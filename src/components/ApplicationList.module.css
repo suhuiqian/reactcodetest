@@ -1,0 +1,197 @@
+.applicationList {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.listTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.applicationCount {
+  font-size: 14px;
+  color: #666;
+}
+
+.errorMessage {
+  font-size: 12px;
+  /*  color: red; */
+  margin: auto;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.bulkActionToggle {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.addButton {
+  padding: 12px 24px;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bulkActions {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e5e9;
+}
+
+.bulkSelect {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.bulkSelect label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bulkSelect input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.selectedCount {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bulkButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bulkButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.emptyState p {
+  margin: 0 0 24px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.applicationsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+}
+
+.listHeadTitle {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.listHeadTitleContent {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .applicationList {
+    padding: 16px;
+  }
+
+  .listHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .headerActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bulkActions {
+    padding: 12px;
+  }
+
+  .bulkSelect {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .bulkButtons {
+    flex-direction: column;
+  }
+
+  .applicationsGrid {
+    gap: 16px;
+  }
+
+  .listTitle {
+    font-size: 20px;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large screen styles can be added here if needed */
+}

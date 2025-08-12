@@ -1,0 +1,68 @@
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  min-width: 0;
+  position: relative;
+}
+
+/* Remove the old connector styles */
+.step-connector {
+  display: none; /* Hide the old connector */
+}
+
+/* Create lines using pseudo-elements */
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 14px; /* Position between circles */
+  right: -28px; /* Position to the right of the circle */
+  width: 48px; /* Longer lines */
+  height: 1px;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.step-item.completed::after{
+  background-color: #FDD100;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .step-item {
+    gap: 6px;
+  }
+
+  .step-item:not(:last-child)::after {
+    width: 48px;
+    top: 16px;
+    right: -28px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .step-item {
+    gap: 8px;
+  }
+
+  .step-item:not(:last-child)::after {
+   width: 60px;
+    top: 16px;
+    right: -30px;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .step-item {
+    gap: 4px;
+  }
+
+  .step-connector {
+    width: 15px;
+    margin: 0 2px;
+  }
+}

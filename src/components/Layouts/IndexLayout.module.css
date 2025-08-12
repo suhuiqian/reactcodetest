@@ -1,0 +1,7 @@
+.indexLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-height);
+  max-width: 580px;
+  margin: 0 auto;
+}

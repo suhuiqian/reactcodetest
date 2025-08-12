@@ -1,0 +1,57 @@
+/* Container */
+.container {
+  width: 100%;
+}
+
+/* Select Group */
+.selectGroup {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+/* Select Wrapper */
+.selectWrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Label */
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+/* Select */
+.select {
+  width: 100%;
+}
+
+/* Error Message */
+.errorMessage {
+  display: block;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .selectGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .selectWrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .label {
+    font-size: 0.75rem;
+  }
+}

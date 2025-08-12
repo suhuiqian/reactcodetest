@@ -1,0 +1,249 @@
+.applicationCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 480px;
+  margin: 1.5rem auto 1.5rem auto;
+}
+
+.applicationCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.applicationCard.selected {
+  border-color: #ffd600;
+  background: #fffef7;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.applicationTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infoLabel {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.25em;
+  letter-spacing: 0.02em;
+  grid-row: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.infoValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  display: block;
+  grid-row: 2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Specific column positioning for labels */
+.infoLabel:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.infoLabel:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.infoLabel:nth-child(5) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Specific column positioning for values */
+.infoValue:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.infoValue:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.infoValue:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.cardActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.actionButton {
+  flex: 1 1 0;
+  background: #ffd600;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: none;
+}
+
+.actionButton:hover {
+  background: #ffc400;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cardContent {
+    padding: 16px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .applicationTitle {
+    font-size: 16px;
+  }
+
+  .infoGrid {
+    gap: 10px;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .actionButton {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .infoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statusIndicator {
+  display: flex;
+  padding: 0.3125rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.3125rem;
+}
+
+.statusDraft {
+  background: rgba(244, 168, 180, 0.81);
+}
+
+.statusNotified {
+  background: #b8dcf6;
+}
+
+.statusSubmitted {
+  background: #e5ffe5; /* light green */
+}
+
+.statusApproved {
+  background: #e5ffe5; /* light green */
+}
+
+.statusRejected {
+  background: #7f7f7f;
+}
+
+.statusLabel {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.applicationStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.rowButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.pointsList {
+  list-style: none;
+  padding: 0 0 0 1px;
+  margin: 10px 0 0 -10px;
+}
+
+.point {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 3px;
+  padding-left: 19px;
+  position: relative;
+  color: #6B7280;
+  margin-left: -3px;
+}
+
+.point::before {
+  content: "※";
+  color: #6B7280;
+  font-weight: bold;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  font-size: 12px;
+}

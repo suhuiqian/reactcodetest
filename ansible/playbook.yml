@@ -1,0 +1,88 @@
+---
+- name: Deploy React App
+  hosts: ubuntu_server
+  vars:
+    app_dir: "/home/{{ ansible_user }}/docker/LifeInsuranceApplyFrontend"
+    frontend_dir: "{{ app_dir }}/frontend"
+    html_dir: "{{ frontend_dir }}/html"
+    config_dir: "{{ frontend_dir }}/config"
+
+  tasks:
+    - name: Create app directory
+      ansible.builtin.file:
+        path: "{{ app_dir }}"
+        state: directory
+        mode: "0755"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Create frontend directory
+      ansible.builtin.file:
+        path: "{{ frontend_dir }}"
+        state: directory
+        mode: "0755"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy Docker Compose file
+      ansible.builtin.template:
+        src: templates/compose.yml.j2
+        dest: "{{ app_dir }}/compose.yml"
+        mode: "0644"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Create html directory
+      ansible.builtin.file:
+        path: "{{ html_dir }}"
+        state: directory
+        mode: "0755"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Create config directory
+      ansible.builtin.file:
+        path: "{{ config_dir }}"
+        state: directory
+        mode: "0755"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy Dockerfile
+      ansible.builtin.template:
+        src: templates/Dockerfile.j2
+        dest: "{{ frontend_dir }}/Dockerfile"
+        mode: "0644"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy nginx main config
+      ansible.builtin.template:
+        src: templates/nginx.conf.j2
+        dest: "{{ config_dir }}/nginx.conf"
+        mode: "0644"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy nginx server config
+      ansible.builtin.template:
+        src: templates/default.conf.j2
+        dest: "{{ config_dir }}/default.conf"
+        mode: "0644"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Upload Reactjs dist directory to html directory
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../dist/"
+        dest: "{{ html_dir }}"
+        mode: "0755"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+      # ansible-playbook -i ansible/inventory ansible/playbook.yml --tags deploy
+
+    #- name: Rebuild and restart Docker container
+    #  ansible.builtin.command:
+    #    cmd: docker-compose -f compose.yml up -d --build
+    #    chdir: "{{ app_dir }}"
+    #  tags: deploy

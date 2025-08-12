@@ -1,0 +1,19 @@
+services:
+  humanlife-frontend:
+    build:
+      context: ./frontend/
+    volumes:
+      - ./frontend/html:/usr/share/nginx/html
+    container_name: humanlife-frontend
+    environment:
+      VIRTUAL_HOST: humanlife-s.snssoft-dev.jp
+      LETSENCRYPT_HOST: humanlife-s.snssoft-dev.jp
+      LETSENCRYPT_EMAIL: sugiyama@snssoft1.onmicrosoft.com
+    restart: always
+    networks:
+      - "container-link"
+
+networks:
+  container-link:
+    external: true
+    name: "rproxy-network"

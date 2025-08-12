@@ -1,0 +1,2 @@
+[ubuntu_server]
+123.225.43.96 ansible_user=snssoft ansible_port=1919 ansible_ssh_private_key_file=/root/.ssh/id_ed25519

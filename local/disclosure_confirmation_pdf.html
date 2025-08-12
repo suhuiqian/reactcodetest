@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @page {
+        size: A4;
+        margin: 25mm 20mm;
+      }
+
+      body {
+        font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "MS Gothic",
+          sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        color: #333;
+        background: white;
+      }
+
+      .document-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #333;
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #2c5282;
+      }
+
+      .company-info {
+        font-size: 11px;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      .date-info {
+        text-align: right;
+        margin-bottom: 20px;
+        font-size: 11px;
+        color: #666;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        padding: 8px 12px;
+        background-color: #f7fafc;
+        border-left: 4px solid #2c5282;
+        color: #2c5282;
+      }
+
+      .content {
+        margin-bottom: 20px;
+        text-align: justify;
+        line-height: 1.9;
+      }
+
+      .important-notice {
+        background-color: #fff5f5;
+        border: 1px solid #fed7d7;
+        border-radius: 4px;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .important-notice .notice-title {
+        font-weight: bold;
+        color: #c53030;
+        margin-bottom: 8px;
+      }
+
+      .question-container {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background-color: #f8f9fa;
+      }
+
+      .question {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #2d3748;
+        line-height: 1.7;
+      }
+
+      .question-number {
+        color: #2c5282;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      .answer {
+        margin: 8px 0 8px 25px;
+        padding: 8px 12px;
+        background-color: white;
+        border-left: 3px solid #48bb78;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .answer-label {
+        font-weight: bold;
+        color: #2d3748;
+        margin-right: 8px;
+      }
+
+      .answer-value {
+        color: #48bb78;
+        font-weight: bold;
+      }
+
+      .follow-up {
+        margin: 8px 0 8px 45px;
+        padding: 8px 12px;
+        background-color: #edf2f7;
+        border-left: 3px solid #4299e1;
+        border-radius: 0 4px 4px 0;
+        font-size: 11px;
+      }
+
+      .follow-up-label {
+        font-weight: bold;
+        color: #2b6cb0;
+        margin-right: 8px;
+      }
+
+      .follow-up-value {
+        color: #2b6cb0;
+        font-weight: bold;
+      }
+
+      .list-container {
+        margin: 15px 0;
+      }
+
+      .list-item {
+        margin: 8px 0 8px 25px;
+        position: relative;
+        line-height: 1.7;
+      }
+
+      .list-item::before {
+        content: "●";
+        position: absolute;
+        left: -15px;
+        color: #2c5282;
+        font-weight: bold;
+      }
+
+      .signature-section {
+        margin-top: 50px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background-color: #f7fafc;
+      }
+
+      .signature-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        align-items: center;
+      }
+
+      .signature-label {
+        font-weight: bold;
+        color: #2d3748;
+      }
+
+      .signature-line {
+        border-bottom: 1px solid #333;
+        width: 200px;
+        height: 20px;
+      }
+
+      .footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #e2e8f0;
+        text-align: center;
+        font-size: 10px;
+        color: #718096;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      @media print {
+        body {
+          font-size: 11px;
+        }
+        .no-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="document-header">
+      <div class="title">約款</div>
+      <div class="company-info">
+        少額短期保険株式会社<br />
+        約款確認・告知内容の最終確認
+      </div>
+    </div>
+
+    <div class="date-info">作成日：2025年6月26日</div>
+
+    <div class="important-notice">
+      <div class="notice-title">重要なお知らせ</div>
+      <div class="content">
+        以下の告知内容をご確認ください。内容に間違いがないことを確認の上、
+        署名・捺印をお願いいたします。告知内容に虚偽があった場合、
+        保険契約が無効となる場合があります。
+      </div>
+    </div>
+
+    <div class="content">
+      お申込みいただく保険商品の「約款」について全てのページの内容を十分にご確認いただき、
+      以下の告知内容が正確であることをご確認ください。
+    </div>
+
+    <div class="subtitle">【告知内容の確認】</div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問1:</span>
+        現在、入院中ですか？（検査入院を含みます）
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問2:</span>
+        現在、①～⑥に該当する事項がありますか？<br />
+        <span
+          style="
+            font-size: 11px;
+            font-weight: normal;
+            color: #666;
+            margin-left: 20px;
+          "
+        >
+          ① 視力の障害(矯正しても左右いずれかの視力が0.3以下)がある<br />
+          ② 聴力・言語・そしゃく機能の障害がある<br />
+          ③ 手・足・指・背骨(脊柱)・関節に、欠損・変形・障害がある<br />
+          ④ 身体障害者手帳の交付をうけたことがある、または交付の申請中である<br />
+          ⑤
+          公的介護保険制度の要介護・要支援の認定をうけたことがある、または認定申請中である<br />
+          ⑥
+          認知症・度認知障がい(MCI)、またはそれらの疑いで医師の診察・検査をうけたことがある
+        </span>
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問3:</span>
+        今までに、「悪性新生物」または「上皮内新物」医師により診断された事はありますか？
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問4:</span>
+        今までに、「心臓の病気」と医師により診断された事はありますか？
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問5:</span>
+        今までに、「脳の病気」と医師により診断された事はありますか？
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <span class="question-number">質問6:</span>
+        今までに、「高血圧症」と医師により診断された事はありますか？
+      </div>
+      <div class="answer">
+        <span class="answer-label">回答:</span>
+        <span class="answer-value">いいえ</span>
+      </div>
+      <div class="follow-up">
+        <span class="follow-up-label">追加質問への回答:</span>
+        <span class="follow-up-value">該当なし</span>
+      </div>
+    </div>
+
+    <div class="subtitle">【約款の主要条項】</div>
+
+    <div class="content">以下の約款条項についてご確認いただきました：</div>
+
+    <div class="list-container">
+      <div class="list-item">保険金の支払い条件</div>
+      <div class="list-item">免責事項</div>
+      <div class="list-item">解約について</div>
+      <div class="list-item">告知義務</div>
+      <div class="list-item">保険料の支払い義務</div>
+      <div class="list-item">契約の変更・更新</div>
+    </div>
+
+    <div class="important-notice" style="margin-top: 40px">
+      <div class="notice-title">確認事項</div>
+      <div class="content">
+        上記の告知内容は事実に相違ありません。また、約款の内容を理解し、
+        保険契約の申込みを行います。告知義務に関する説明を受け、
+        告知書の記載内容について相違ないことを確認いたします。
+      </div>
+    </div>
+
+    <div class="signature-section">
+      <div class="signature-row">
+        <span class="signature-label">申込日:</span>
+        <div class="signature-line"></div>
+      </div>
+      <div class="signature-row">
+        <span class="signature-label">契約者氏名:</span>
+        <div class="signature-line"></div>
+      </div>
+      <div class="signature-row">
+        <span class="signature-label">契約者署名:</span>
+        <div class="signature-line"></div>
+      </div>
+      <div class="signature-row">
+        <span class="signature-label">印:</span>
+        <div
+          style="
+            width: 50px;
+            height: 50px;
+            border: 1px solid #333;
+            border-radius: 50%;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div class="footer">少額短期保険株式会社　告知内容確認書</div>
+  </body>
+</html>

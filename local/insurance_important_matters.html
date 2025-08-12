@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重要事項等のご説明</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 25mm 20mm;
+        }
+        
+        body {
+            font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "MS Gothic", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #333;
+            background: white;
+        }
+        
+        .document-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c5282;
+        }
+        
+        .company-info {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background-color: #f7fafc;
+            border-left: 4px solid #2c5282;
+            color: #2c5282;
+        }
+        
+        .content {
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+        
+        .important-notice {
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .important-notice .notice-title {
+            font-weight: bold;
+            color: #c53030;
+            margin-bottom: 8px;
+        }
+        
+        .list-container {
+            margin: 15px 0;
+        }
+        
+        .list-item {
+            margin: 8px 0 8px 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .list-item::before {
+            content: "●";
+            position: absolute;
+            left: -15px;
+            color: #2c5282;
+            font-weight: bold;
+        }
+        
+        .contract-details {
+            background-color: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted #cbd5e0;
+            padding-bottom: 8px;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            min-width: 120px;
+            color: #2d3748;
+        }
+        
+        .detail-value {
+            flex: 1;
+            padding-left: 10px;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 10px;
+            color: #718096;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body {
+                font-size: 11px;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-header">
+        <div class="title">重要事項等のご説明</div>
+        <div class="company-info">
+            少額短期保険株式会社<br>
+            契約概要・注意喚起情報
+        </div>
+    </div>
+
+    <div class="important-notice">
+        <div class="notice-title">ご確認のお願い</div>
+        <div class="content">
+            お申込みいただく保険商品の「重要事項（契約概要・注意喚起情報）」について、
+            全てのページの内容を十分にご確認いただき、ご理解いただいた上でお申込みください。
+        </div>
+    </div>
+
+    <div class="content">
+        この書面は、保険業法第300条の2に基づいて作成された重要事項説明書です。
+        ご契約前に必ずお読みいただき、内容をご理解いただいた上でお申込みください。
+    </div>
+
+    <div class="subtitle">【契約概要】</div>
+    
+    <div class="contract-details">
+        <div class="detail-row">
+            <div class="detail-label">保険種類</div>
+            <div class="detail-value">終身保険</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">死亡保険金</div>
+            <div class="detail-value">1,000万円</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">医療特約</div>
+            <div class="detail-value">入院給付金日額 5,000円</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">介護特約</div>
+            <div class="detail-value">要介護状態保険金 500万円</div>
+        </div>
+        <div class="detail-row">
+            <div class="detail-label">保険期間</div>
+            <div class="detail-value">終身</div>
+        </div>
+    </div>
+
+    <div class="subtitle">【注意喚起情報】</div>
+    
+    <div class="list-container">
+        <div class="list-item">保険料の支払い義務について
+            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                保険料の払込みが滞った場合、保険契約が失効する場合があります。
+            </div>
+        </div>
+        <div class="list-item">告知義務について
+            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                健康状態等について正確にお答えいただく必要があります。
+            </div>
+        </div>
+        <div class="list-item">解約について
+            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                解約時期によっては解約返戻金が払込保険料を下回る場合があります。
+            </div>
+        </div>
+        <div class="list-item">保険金の支払いについて
+            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                免責事由に該当する場合は保険金をお支払いできません。
+            </div>
+        </div>
+    </div>
+
+    <div class="subtitle">【ご契約のしおり】</div>
+    
+    <div class="list-container">
+        <div class="list-item">保険契約の基本的な仕組み</div>
+        <div class="list-item">保障内容の詳細</div>
+        <div class="list-item">保険料の計算方法</div>
+        <div class="list-item">解約返戻金について</div>
+    </div>
+
+    <div class="subtitle">【約款】</div>
+    
+    <div class="list-container">
+        <div class="list-item">保険契約の条件</div>
+        <div class="list-item">免責事項</div>
+        <div class="list-item">保険金の支払い条件</div>
+        <div class="list-item">その他の重要条項</div>
+    </div>
+
+    <div class="important-notice" style="margin-top: 40px;">
+        <div class="notice-title">お問い合わせ先</div>
+        <div class="content">
+            ご不明な点がございましたら、下記までお問い合わせください。<br>
+            少額短期保険株式会社　お客様サービス部<br>
+            電話：0120-XXX-XXX（平日9:00～17:00）
+        </div>
+    </div>
+
+    <div class="footer">
+        少額短期保険株式会社　重要事項説明書
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+FROM nginx:latest
+
+# COPY ./html /usr/share/nginx/html/
+# BIND DIRECTORY TO HTML DIRECTORY
+# UNNEED COPY HTML files
+
+# Copy nginx configuration files
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
+COPY ./config/default.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80

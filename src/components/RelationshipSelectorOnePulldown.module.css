@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  font-family: inherit;
+}
+
+.customOption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.customOption:hover {
+  background-color: #f1f5f9;
+}
+
+.optionLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.optionDescription {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.errorMessage {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ef4444;
+  line-height: 1.4;
+}
+
+/* Override react-select specific styles */
+.select .relationship-select__control {
+  transition: all 0.2s ease;
+}
+
+.select .relationship-select__control:hover {
+  border-color: #9ca3af;
+}
+
+.select .relationship-select__control--is-focused {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.select .relationship-select__control--is-focused:hover {
+  border-color: #3b82f6;
+}
+
+.select .relationship-select__menu {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.select .relationship-select__option {
+  padding: 0 !important;
+}
+
+.select .relationship-select__option--is-focused {
+  background-color: #f1f5f9 !important;
+}
+
+.select .relationship-select__option--is-selected {
+  background-color: #3b82f6 !important;
+}
+
+.select .relationship-select__option--is-selected .optionLabel {
+  color: white;
+}
+
+.select .relationship-select__option--is-selected .optionDescription {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.select .relationship-select__single-value {
+  font-weight: 500;
+}
+
+.select .relationship-select__placeholder {
+  font-weight: 400;
+}
+
+/* Loading and no options styles */
+.select .relationship-select__loading-indicator {
+  color: #3b82f6;
+}
+
+.select .relationship-select__no-options-message {
+  color: #6b7280;
+  font-size: 14px;
+  padding: 16px;
+}

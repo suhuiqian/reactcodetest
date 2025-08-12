@@ -1,0 +1,38 @@
+.textCard {
+  position: relative;
+  /* width: 400px; */
+  width: 100%;
+  min-height: 200px; /* Accommodate both title and content */
+  margin: 0 auto 20px auto; /* Add bottom margin for spacing between cards */
+  background-color: transparent; /* No background */
+  border-radius: 0; /* No border radius */
+  box-shadow: none; /* No shadow */
+  padding: 0; /* No padding */
+  box-sizing: border-box;
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+/* TODO: TextCards width MUST match FormCard*/
+/* @media (max-width: 768px) {
+  .textCard {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 10px auto;
+  }
+} */
+
+/* More spacing on desktop */
+/* @media (min-width: 1024px) {
+  .textCard {
+    width: 450px;
+    margin: 0 auto 30px auto;
+  }
+} */
+
+@media (min-width: 1440px) {
+  .textCard {
+    width: 100%;
+    margin: 0 auto 40px auto; /* Even more spacing on large desktop */
+  }
+}

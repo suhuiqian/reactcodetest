@@ -1,0 +1,76 @@
+/* Mobile-first base styles */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: #fdd100;
+  margin-top: auto; /* This is the key for sticky footer */
+  flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+.footerContent {
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+}
+
+.copyrightText {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .footer {
+    padding: 24px 20px;
+  }
+
+  .footerContent {
+    max-width: 500px;
+  }
+
+  .copyrightText {
+    word-break: normal;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 28px 24px;
+  }
+
+  .footerContent {
+    max-width: 600px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+  .footer {
+    padding: 32px 28px;
+  }
+
+  .footerContent {
+    max-width: 700px;
+  }
+}
+
+/* 4K and ultra-wide screens */
+@media (min-width: 2560px) {
+  .footer {
+    padding: 36px 32px;
+  }
+
+  .footerContent {
+    max-width: 800px;
+  }
+}

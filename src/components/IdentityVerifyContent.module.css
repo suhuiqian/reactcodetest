@@ -1,0 +1,181 @@
+.structuredContent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 12px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 10px;
+}
+
+.structuredContent:first-child{
+  margin-top: 10px;
+}
+
+
+.contentTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 28px;
+}
+
+.sectionTitle::before {
+  content: "■";
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pointsContainer {
+  padding-left: 28px;
+}
+
+.singlePoint {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
+
+.singlePoint:last-child {
+  margin-bottom: 0;
+}
+
+.pointsList {
+  list-style: none;
+  padding: 0 0 0 27px;
+  margin: 0;
+}
+
+.point {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 3px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.point::before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+}
+
+.comment {
+  color: #FF0004;
+  margin-left: -3px;
+}
+
+.comment::before {
+  content: "※";
+  color: #FF0004;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+}
+
+.point:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  
+
+  .contentTitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    margin-bottom: 3px;
+    padding-left: 24px;
+  }
+
+  .sectionTitle::before {
+    font-size: 16px;
+  }
+
+  .pointsContainer {
+    padding-left: 24px;
+  }
+
+  .singlePoint {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .point {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    padding-left: 16px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .structuredContent {
+    padding: 0 12px;
+  }
+
+  .contentTitle {
+    font-size: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .pointsContainer {
+    padding-left: 20px;
+  }
+
+  .singlePoint {
+    font-size: 16px;
+  }
+
+  .point {
+    font-size: 16px;
+    padding-left: 14px;
+  }
+}

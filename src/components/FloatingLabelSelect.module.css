@@ -1,0 +1,143 @@
+.container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.trigger {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.trigger:hover {
+  border-color: #9ca3af;
+}
+
+.trigger:focus {
+  border-color: #7cc4f8;
+}
+
+.trigger.floating {
+  padding: 0.5rem 0.75rem 0.5rem;
+}
+
+.trigger.error {
+  border-color: #ef4444;
+}
+
+.trigger.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.trigger.disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.icon {
+  color: #6b7280;
+  transition: transform 0.2s ease-in-out;
+}
+
+.trigger[data-state="open"] .icon {
+  transform: rotate(180deg);
+}
+
+.label {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  color: #b9b9b9;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  background-color: white;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+.labelFloating {
+  top: 0;
+  font-size: 1rem;
+  color: #7cc4f8;
+  font-weight: 400;
+  background-color: white;
+  padding: 0 0.25rem;
+  transform: translateY(-50%);
+}
+
+.labelError {
+  color: #ef4444;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 0.125rem;
+}
+
+.content {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+.viewport {
+  padding: 0.5rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.item:hover {
+  background-color: #f3f4f6;
+}
+
+.item[data-highlighted] {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.item[data-state="checked"] {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}

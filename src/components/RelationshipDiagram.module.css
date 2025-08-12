@@ -1,0 +1,395 @@
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+}
+
+/* Legend */
+.legend {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.legendContent {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.legendTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.legendItems {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.legendDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+/* Color classes */
+.green {
+  background-color: #4ade80;
+}
+
+.pink {
+  background-color: #f472b6;
+}
+
+.yellow {
+  background-color: #fbbf24;
+}
+
+.blue {
+  background-color: #60a5fa;
+}
+
+.light-blue {
+  background-color: #93c5fd;
+}
+
+/* Family Tree */
+.familyTree {
+  position: relative;
+}
+
+.generation {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Person Icon */
+.personContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personIcon {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.2s;
+  transform: scale(1);
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.personIcon:hover {
+  transform: scale(1.1);
+}
+
+.personIcon.selected {
+  box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.5);
+}
+
+.personIcon.spouse {
+  border: 2px solid #e5e7eb;
+}
+
+.personLabel {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: #6b7280;
+  text-align: center;
+  max-width: 60px;
+  word-wrap: break-word;
+}
+
+/* Size classes */
+.large {
+  width: 3rem;
+  height: 3rem;
+}
+
+.normal {
+  width: 2rem;
+  height: 2rem;
+}
+
+.small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.largeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.normalIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.smallIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* Self */
+.selfContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.self {
+  width: 3rem;
+  height: 3rem;
+  background-color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.selfIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.selfLabel {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Spouse */
+.spouseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Layout classes */
+.greatGrandparents {
+  display: flex;
+  gap: 1rem;
+}
+
+.grandparents {
+  display: flex;
+  gap: 3rem;
+}
+
+.grandparentPair {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.parentsLevel {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.uncleAuntGroup {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.parents {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selfLevel {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.siblings {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.spouseRelativesLevel {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.spouseParents {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.spouseSiblings {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.spouseNephews {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.children {
+  display: flex;
+  gap: 1rem;
+}
+
+.grandchildren {
+  display: flex;
+  gap: 1rem;
+}
+
+.greatGrandchildren {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Selection Display */
+.selectionDisplay {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #faf5ff;
+  border-radius: 0.5rem;
+}
+
+.selectionTitle {
+  font-weight: 500;
+  color: #7c3aed;
+  margin-bottom: 0.5rem;
+}
+
+.selectionContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selectionDot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.selectionLabel {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.selectionDegree {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Action Button */
+.actionButton {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonEnabled {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.buttonEnabled:hover {
+  background-color: #6d28d9;
+}
+
+.buttonDisabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .legendItems {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .parentsLevel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .selfLevel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .spouseRelativesLevel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .grandparents {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .children {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grandchildren {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .greatGrandchildren {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .personLabel {
+    font-size: 0.625rem;
+    max-width: 50px;
+  }
+
+  .legendTitle {
+    font-size: 0.75rem;
+  }
+
+  .legendItems {
+    font-size: 0.75rem;
+  }
+}

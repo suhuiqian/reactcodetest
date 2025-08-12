@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.categoryContainer,
+.relationshipContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categoryLabel,
+.relationshipLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.categorySelect,
+.relationshipSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  color: #374151;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.categorySelect:focus,
+.relationshipSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.categorySelect:disabled,
+.relationshipSelect:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.option {
+  padding: 0.5rem;
+}
+
+.optionGroup {
+  font-weight: 600;
+  color: #6b7280;
+  background-color: #f9fafb;
+}
+
+.optionPrimary {
+  background-color: #faf5ff;
+}
+
+.optionFirst {
+  background-color: #eff6ff;
+}
+
+.optionSecond {
+  background-color: #f0fdf4;
+}
+
+.optionThird {
+  background-color: #fefce8;
+}
+
+.optionOther {
+  background-color: #f9fafb;
+}
+
+/* Responsive layout - side by side on larger screens */
+@media (min-width: 640px) {
+  .container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .categoryContainer,
+  .relationshipContainer {
+    flex: 1;
+  }
+}

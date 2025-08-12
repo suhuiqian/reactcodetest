@@ -1,0 +1,195 @@
+.accountPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  background-color: white;
+  flex: 1; /* Take up available space in the flex container */
+}
+
+.loginContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  max-width: 440px;
+  flex: 1; /* 让其在flex布局下自动填充剩余高度 */
+}
+
+.loginContainer h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.inputGroup input.error {
+  border-color: #ff0004;
+  background-color: #fff5f5;
+}
+
+.inputGroup input.error:focus {
+  border-color: #ff0004;
+  box-shadow: 0 0 0 2px rgba(255, 0, 4, 0.25);
+}
+
+.inputGroup input::placeholder {
+  color: #999;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 120px;
+}
+
+.errorMessage {
+  color: #ff0004;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.tipMessageList {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tipMessageItem {
+  color: #ff0004;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+.tipMark {
+  margin-right: 0.4em;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.linkText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* This aligns children to the right */
+  margin-top: -10px;
+  margin-right: 20px;
+}
+
+.linkItem {
+  margin-bottom: 8px;
+}
+
+.linkItem a {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.linkItem a:hover {
+  color: #007bff;
+}
+
+.disabledLink {
+  color: #666;
+  text-align: right;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.forgotPasswordText {
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.accountCreateText {
+  color: #f00;
+  margin-top: 10px;
+  text-align: right;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.debugInfo {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.debugInfo p {
+  margin: 5px 0;
+}

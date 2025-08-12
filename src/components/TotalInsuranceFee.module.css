@@ -1,0 +1,107 @@
+.totalFeeCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.totalFeeCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*   margin-bottom: 1rem; */
+  margin: 0 auto;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  /* margin: 0; */
+  color: #333;
+  text-align: center;
+}
+
+.applicationCount {
+  font-size: 0.875rem;
+  color: #666;
+  background: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.feeDisplay {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.feeAmount {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #111;
+}
+
+.feeLabel {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.cardFooter {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.feeBreakdown {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .totalFeeCard {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .feeAmount {
+    font-size: 1.75rem;
+  }
+
+  .applicationCount {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .totalFeeCard {
+    padding: 1rem;
+  }
+
+  .feeAmount {
+    font-size: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+}

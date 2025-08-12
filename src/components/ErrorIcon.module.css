@@ -1,0 +1,23 @@
+.errorIcon {
+  display: inline-block;
+  background-image: url('/public/errIcon.svg'); /* 放置到public/icons目录下 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 尺寸控制 */
+.small {
+  width: 20px;
+  height: 20px;
+}
+
+.medium {
+  width: 40px;
+  height: 40px;
+}
+
+.large {
+  width: 60px;
+  height: 60px;
+}

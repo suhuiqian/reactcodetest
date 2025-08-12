@@ -1,0 +1,128 @@
+/* Radix UI Dialog Overlay */
+.relationshipOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Radix UI Dialog Content */
+.relationshipModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 0 0 0;
+  background-color: white;
+  border-radius: 12px;
+  max-width: 450px;
+  min-height: 200px;
+  width: 90vw;
+  max-height: 85vh;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.relationshipModal:focus {
+  outline: none;
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.relationshipModal.primary {
+  border-color: var(--main_color, #fdd100);
+}
+
+.relationshipContent {
+  transform: translateY(-20px);
+  width: 100%;
+}
+
+.relationshipTitle {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diagramContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* width: 440px;
+  height: 440px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relationshipDiagram {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+.relationshipActions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Screen reader only utility class */
+:global(.sr-only) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+  .relationshipModal {
+    width: 95vw;
+    padding: 15px 0 0 0;
+  }
+
+  .diagramContainer {
+    width: 320px;
+    height: 320px;
+  }
+} */

@@ -1,0 +1,50 @@
+.textTitle {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  height: auto;
+  min-height: 19px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #fdd100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1.2;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .textTitle {
+    font-size: 20px;
+    text-align: left;
+    justify-content: flex-start;
+    white-space: normal;
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .textTitle {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .textTitle {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+}

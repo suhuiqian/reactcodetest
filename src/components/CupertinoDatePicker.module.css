@@ -1,0 +1,235 @@
+.container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.trigger {
+  width: 100%;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.trigger:hover {
+  border-color: #007aff;
+  background-color: #f8fafc;
+}
+
+.trigger:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.trigger.disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+.triggerText {
+  flex: 1;
+  text-align: left;
+  color: inherit;
+}
+
+.chevron {
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.pickerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.pickerContainer {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+}
+
+.pickerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  background-color: #ffffff;
+}
+
+.pickerButton {
+  background: none;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  color: #6b7280;
+}
+
+.pickerButton:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.confirmButton {
+  color: #007aff;
+  font-weight: 600;
+}
+
+.confirmButton:hover {
+  background-color: #eff6ff;
+  color: #007aff;
+}
+
+.pickerTitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.pickerContent {
+  display: flex;
+  height: 200px;
+  background-color: #ffffff;
+}
+
+.pickerWheel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #f3f4f6;
+}
+
+.pickerWheel:last-child {
+  border-right: none;
+}
+
+.pickerWheelContent {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 80px 0;
+}
+
+.pickerWheelContent::-webkit-scrollbar {
+  display: none;
+}
+
+.pickerItem {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  background-color: #ffffff;
+}
+
+.pickerItem:hover {
+  background-color: #f9fafb;
+  color: #6b7280;
+}
+
+.pickerItem.selected {
+  color: #000000;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+/* Selection indicator */
+.pickerWheel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  right: 8px;
+  height: 40px;
+  background-color: #007aff;
+  opacity: 0.1;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .pickerContainer {
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .pickerContent {
+    height: 180px;
+  }
+
+  .pickerItem {
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .pickerWheelContent {
+    padding: 72px 0;
+  }
+}

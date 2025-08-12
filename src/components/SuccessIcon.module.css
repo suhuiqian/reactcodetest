@@ -1,0 +1,95 @@
+.successIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.successIcon::before {
+  content: "";
+  background-color: #ffd600;
+  border-radius: 50%;
+  position: relative;
+}
+
+.successIcon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 1;
+}
+
+/* Size variants */
+.successIcon.small::before {
+  width: 40px;
+  height: 40px;
+}
+
+.successIcon.small::after {
+  width: 12px;
+  height: 20px;
+  border-width: 0 2px 2px 0;
+}
+
+.successIcon.medium::before {
+  width: 60px;
+  height: 60px;
+}
+
+.successIcon.medium::after {
+  width: 15px;
+  height: 25px;
+  border-width: 0 2px 2px 0;
+}
+
+.successIcon.large::before {
+  width: 80px;
+  height: 80px;
+}
+
+.successIcon.large::after {
+  width: 20px;
+  height: 35px;
+  border-width: 0 3px 3px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .successIcon.small::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .successIcon.small::after {
+    width: 10px;
+    height: 16px;
+    border-width: 0 1.5px 1.5px 0;
+  }
+
+  .successIcon.medium::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .successIcon.medium::after {
+    width: 12px;
+    height: 20px;
+    border-width: 0 1.5px 1.5px 0;
+  }
+
+  .successIcon.large::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .successIcon.large::after {
+    width: 15px;
+    height: 25px;
+    border-width: 0 2px 2px 0;
+  }
+}

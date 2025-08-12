@@ -1,0 +1,160 @@
+.container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #7cc4f8;
+  /* border-color: #3b82f6; 
+    the color of input border when focused
+  */
+  /* box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); */
+}
+
+.input.floating {
+  padding: 0.5rem 0.75rem 0.5rem;
+}
+
+.input.error {
+  border-color: #ef4444;
+}
+
+.input.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input.disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.input.readonly {
+  background-color: #f9fafb;
+  color: #374151;
+  cursor: default;
+  border-color: #e5e7eb;
+}
+
+.label {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  color: #b9b9b9;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  background-color: white;
+  /* padding: 0 0.25rem; */
+  font-family: Inter;
+  font-size: 16px;
+}
+
+.labelFloating {
+  top: 0; /* Move label to the very top */
+  font-size: 1rem;
+  color: #7cc4f8;
+  font-weight: 400;
+  background-color: white;
+  padding: 0 0.25rem;
+  /* Optional: add a small negative margin to pull the label slightly over the border */
+  transform: translateY(-50%);
+}
+
+.labelError {
+  color: #ef4444;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 0.125rem;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.helpText {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Name input row styles */
+.nameInputRow {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nameInputRow .container {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nameInputRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nameInputRow .container {
+    margin-bottom: 1.5rem;
+  }
+
+  .nameInputRow .container:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.helpList {
+  list-style: none;
+  padding: 0 0 0 1px;
+  margin: 0;
+}
+
+.helpItem {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 3px;
+  padding-left: 14px;
+  position: relative;
+  margin-left: -3px;
+}
+
+.helpItem::before {
+  content: "※";
+  font-weight: bold;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  font-size: 12px;
+}

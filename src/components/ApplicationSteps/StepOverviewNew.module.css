@@ -1,0 +1,154 @@
+.stepOverviewNew {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.description {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.actionButtons {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.tempSaveButton {
+  min-width: 120px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nextButton {
+  min-width: 120px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.summary {
+  margin-top: 32px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.summary h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summaryLabel {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.summaryValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stepOverviewNew {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .actionButtons {
+    padding: 20px 16px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .tempSaveButton,
+  .nextButton {
+    width: 100%;
+  }
+
+  .summary {
+    padding: 20px 16px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .summaryItem {
+    padding: 12px;
+  }
+
+  .summaryValue {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}

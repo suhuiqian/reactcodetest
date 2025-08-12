@@ -1,0 +1,42 @@
+/* App Layout Styles */
+
+/* App Container */
+.App {
+  min-width: var(--min-width);
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (min-width: 440px) {
+  .App {
+    max-width: 100%;
+  }
+}
+
+/* Main Content Area */
+main {
+  background-color: white;
+  flex: 1; /* Takes up remaining space */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout Utilities */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 15px;
+  }
+}

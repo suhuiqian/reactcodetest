@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* CSS Custom Properties (Variables) */
+:root {
+  --min-width: 440px;
+  --min-height: 956px;
+  --primary-color: #fdd100;
+  --primary-hover: #fef3c7;
+  --primary-light: #fef9e7;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #213547;
+  background-color: white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Foundation Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML/Body Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: var(--min-width);
+  min-height: var(--min-height);
+  background-color: white;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  position: relative;
+}
+
+/* Root Container */
+#root {
+  width: 100%;
+  min-width: var(--min-width);
+  min-height: var(--min-height);
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Element Resets */
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+span,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Focus Management */
+*:focus {
+  outline: none;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Form Element Resets */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Utility Classes */
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Color Scheme */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7cc4f8;
+  /* box-shadow: 0 0 0 2px rgba(253, 209, 0, 0.25); */
+  /*  box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.25); */
+}
+
+/* span.required {
+  color: red;
+} */
